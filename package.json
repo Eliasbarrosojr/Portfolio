@@ -21,5 +21,10 @@
     "@vitejs/plugin-react": "^1.3.0",
     "typescript": "^4.6.3",
     "vite": "^2.9.9"
-  }
+  },
+  "description": "💻 Portfólio\r ============",
+  "main": "index.js",
+  "author": "Elias Jr <eliasbarroso222@gmail.com>",
+  "license": "ISC",
+  "repository": "git@github.com:Eliasbarrosojr/Portfolio-2.git"
 }
