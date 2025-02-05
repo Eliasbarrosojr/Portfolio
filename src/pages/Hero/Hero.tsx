@@ -1,9 +1,12 @@
-import { Container, Grid, styled } from "@mui/material";
-import Avatar from "../../assets/avatar.jpg";
+import { Box, Button, Container, styled, Typography } from "@mui/material";
+import avatar from "../../assets/avatar.jpg";
+import DownloadIcon from "@mui/icons-material/Download";
+import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 
 const Hero = () => {
   const StyledHero = styled("div")(() => ({
     backgroundColor: "black",
+    height: "100vh",
   }));
 
   const StyledImg = styled("img")(() => ({
@@ -14,11 +17,35 @@ const Hero = () => {
   return (
     <StyledHero>
       <Container>
-        <Grid container spacing={2}>
-          <Grid item xs={4}>
-            <StyledImg src={Avatar} />
-          </Grid>
-        </Grid>
+        <Box
+          display="grid"
+          gridTemplateColumns={{ xs: "1fr", sm: "1fr 2fr" }}
+          gap={2}
+        >
+          <StyledImg src={avatar} />
+          <Box>
+            <Typography color="white" variant="h1" textAlign="center">
+              Elias Barroso Jr
+            </Typography>
+            <Typography color="white" variant="h2" textAlign="center">
+              I'm Software Engineer
+            </Typography>
+            <Box
+              display="grid"
+              gridTemplateColumns={{ xs: "1fr", sm: "1fr 1fr" }}
+              gap={2}
+            >
+              <Button>
+                <DownloadIcon />
+                Download CV
+              </Button>
+              <Button>
+                <AlternateEmailIcon />
+                Contact Me
+              </Button>
+            </Box>
+          </Box>
+        </Box>
       </Container>
     </StyledHero>
   );
